@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-glow-neon {
+    text-shadow: 0 0 16px rgba(0, 255, 102, 0.6), 0 0 32px rgba(0, 255, 102, 0.25);
+  }
+  .box-glow-neon {
+    box-shadow: 0 0 30px -5px rgba(0, 255, 102, 0.35), 0 0 15px -3px rgba(0, 255, 102, 0.2);
+  }
+  .box-glow-neon-lg {
+    box-shadow: 0 0 50px -5px rgba(0, 255, 102, 0.45), 0 10px 30px -5px rgba(0, 200, 83, 0.3);
+  }
+  .box-glow-neon-subtle {
+    box-shadow: 0 0 25px -4px rgba(0, 255, 102, 0.18);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-glow-pulse {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmerSweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Prevent unwanted mobile bounce */
+html, body {
+  background-color: #030504;
+  color: #FFFFFF;
+}
+
+/* Glass card styling */
+.glass-panel {
+  background: rgba(10, 16, 12, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 102, 0.12);
+}
+
+.glass-panel-subtle {
+  background: rgba(8, 12, 9, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}

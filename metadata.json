@@ -1,0 +1,6 @@
+{
+  "name": "Pack de Artes para Plaquinhas",
+  "description": "Pack profissional de artes para plaquinhas de Pix, WhatsApp e Wi-Fi editáveis no Canva por apenas R$ 10.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
